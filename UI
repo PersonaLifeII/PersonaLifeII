@@ -35,9 +35,9 @@ end
 
 function ShowerLib2:HSVtoRGB(hsv)
     local color3 = hsv
-    local r = math.floor(color3.R * 255)
-    local g = math.floor(color3.G * 255)
-    local b = math.floor(color3.B * 255)
+    local r = math.floor(color3.R * 150)
+    local g = math.floor(color3.G * 150)
+    local b = math.floor(color3.B * 150)
     return r,g,b
   end
   
@@ -81,7 +81,7 @@ function ShowerLib2:Notify(Table)
     local Duration = Table.Duration or 3
     local Font = Table.Font or Enum.Font.SourceSansLight
     local IsRGB = Table.RGB or Table.Rgb or false
-    local DefaultColor = Table.UnderlineColor or Table.Underlinecolor or Color3.fromRGB(150, 150, 150)
+    local DefaultColor = Table.UnderlineColor or Table.Underlinecolor or Color3.fromRGB(255, 255, 255)
 
     local NotifyGui = ShowerLib2:Create("ScreenGui", {
         Name = "ShowerLibNotify";
